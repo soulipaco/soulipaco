@@ -14,14 +14,15 @@ enforced*, including the ones that came out badly.
 Governed text processing on Databricks. The question I keep coming back to: a table can
 have clean schemas, lineage and access control while its `description` and `work_notes`
 columns still carry names, emails and phone numbers. **[pii-reduction](https://github.com/soulipaco/pii-reduction)**
-is the current answer to it, tagged `v0.1.0`.
+is the current answer to it, released as
+[`v0.1.0`](https://github.com/soulipaco/pii-reduction/releases/tag/v0.1.0).
 
 ## Selected work
 
 ### [pii-reduction](https://github.com/soulipaco/pii-reduction)
 
-*Structure-aware, multilingual PII reduction for Databricks · `v0.1.0` · Python ·
-Presidio + spaCy · Azure Databricks*
+*Structure-aware, multilingual PII reduction for Databricks · released `v0.1.0` ·
+Python · Presidio + spaCy · Azure Databricks*
 
 Reduces PII inside free-text columns an operator names. A ticket id survives, a
 timestamp and a speaker label survive; the name and the email do not. English, German
