@@ -36,11 +36,20 @@ and Greek. **Every published number is a regression gate** — 56 of them, acros
 corpora and both provider chains — so no figure in the documentation can move without a
 test failing.
 
-| | |
-|---|---|
-| **Executed** | driver-path parity on a real Azure Databricks workspace; the service hosted as a Databricks App and driven over HTTPS |
-| **Not executed — and it says so** | the distributed `mapInPandas` path is shipped and has never run; `ADDRESS` is in the taxonomy and *nothing detects it*; Greek PERSON recall is published as `0.500` rather than rounded up |
-| **Not claimed** | it is not an estate scanner, and it promises no compliance outcome and no guaranteed anonymization |
+<table>
+<tr>
+<td width="210"><b>Executed</b></td>
+<td>driver-path parity on a real Azure Databricks workspace; the service hosted as a Databricks App and driven over HTTPS</td>
+</tr>
+<tr>
+<td><b>Not executed — and it says so</b></td>
+<td>the distributed <code>mapInPandas</code> path is shipped and has never run; <code>ADDRESS</code> is in the taxonomy and <i>nothing detects it</i>; Greek PERSON recall is published as <code>0.500</code> rather than rounded up</td>
+</tr>
+<tr>
+<td><b>Not claimed</b></td>
+<td>it is not an estate scanner, and it promises no compliance outcome and no guaranteed anonymization</td>
+</tr>
+</table>
 
 **Inspect** ·
 [what was actually executed](https://github.com/soulipaco/pii-reduction/blob/main/docs/22_EVIDENCE.md) ·
@@ -81,11 +90,20 @@ a committed evaluation set and live Databricks evidence.
 
 ## Also in the portfolio
 
-| | |
-|---|---|
-| [**prophet-forecasting-mlops**](https://github.com/soulipaco/prophet-forecasting-mlops) | A compact, reproducible batch-forecasting reference. Forecasting behaviour stays in testable Python; Databricks-specific code is confined to delivery, tracking and persistence. A seeded synthetic source makes the contracts reviewable without private data — and the recorded run counts are execution and contract checks, not accuracy claims. |
-| [**databricks-genie-deployment-kit**](https://github.com/soulipaco/databricks-genie-deployment-kit) | Semantic analytics managed as code: room configuration, semantic metadata, SQL examples, benchmark questions, deployment scripts and operating playbooks as reviewable assets, with a public-data Olist example. Durable repository-native dashboard evidence is still pending, because the published dashboard is not anonymously accessible. |
-| [**speechanalytics-databricks-pipeline**](https://github.com/soulipaco/speechanalytics-databricks-pipeline) | A 16-stage contract-first speech-analytics design with per-call failure isolation and guards against raw transcript text reaching analytical outputs. **No recorded successful Databricks pipeline execution**, so it stays labelled a prototype. |
+<table>
+<tr>
+<td width="250"><a href="https://github.com/soulipaco/prophet-forecasting-mlops"><b>prophet-forecasting-mlops</b></a></td>
+<td>A compact, reproducible batch-forecasting reference. Forecasting behaviour stays in testable Python; Databricks-specific code is confined to delivery, tracking and persistence. A seeded synthetic source makes the contracts reviewable without private data — and the recorded run counts are execution and contract checks, not accuracy claims.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/soulipaco/databricks-genie-deployment-kit"><b>databricks-genie-deployment-kit</b></a></td>
+<td>Semantic analytics managed as code: room configuration, semantic metadata, SQL examples, benchmark questions, deployment scripts and operating playbooks as reviewable assets, with a public-data Olist example. Durable repository-native dashboard evidence is still pending, because the published dashboard is not anonymously accessible.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/soulipaco/speechanalytics-databricks-pipeline"><b>speechanalytics-databricks-pipeline</b></a></td>
+<td>A 16-stage contract-first speech-analytics design with per-call failure isolation and guards against raw transcript text reaching analytical outputs. <b>No recorded successful Databricks pipeline execution</b>, so it stays labelled a prototype.</td>
+</tr>
+</table>
 
 ---
 
