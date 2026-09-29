@@ -14,12 +14,11 @@ enforced*, including the ones that came out badly.
 
 ## Currently
 
-Governed text processing on Databricks. The question I keep coming back to: a table can
-have clean schemas, lineage and access control while its `description` and `work_notes`
-columns still carry names, emails and phone numbers.
-**[pii-reduction](https://github.com/soulipaco/pii-reduction)** is my answer to it,
-released as
-[`v0.1.0`](https://github.com/soulipaco/pii-reduction/releases/tag/v0.1.0).
+Testing platform claims before building on them. Can one Databricks SQL function replace a
+tuned forecasting pipeline? **[databricks-forecast-planning-cockpit](https://github.com/soulipaco/databricks-forecast-planning-cockpit)** answers that
+under a protocol frozen before the test year was downloaded — and publishes the part of
+the answer that came out badly. Released as
+[`v1.0.0`](https://github.com/soulipaco/databricks-forecast-planning-cockpit/releases/tag/v1.0.0).
 
 ---
 
@@ -56,6 +55,38 @@ test failing.
 [36 decision records](https://github.com/soulipaco/pii-reduction/blob/main/docs/adr/README.md) ·
 [the measured baseline](https://github.com/soulipaco/pii-reduction/blob/main/docs/14_IMPLEMENTATION_PLAN.md) ·
 [providers and their limits](https://github.com/soulipaco/pii-reduction/blob/main/docs/15_PROVIDERS.md)
+
+### [databricks-forecast-planning-cockpit](https://github.com/soulipaco/databricks-forecast-planning-cockpit)
+
+> Frozen-protocol forecasting benchmark · released `v1.0.0`
+> · Databricks `ai_forecast` · Prophet · Delta · Asset Bundles · AI/BI
+
+`ai_forecast` v2 against a tuned Prophet pipeline and a weekly seasonal baseline on 21 NYC
+311 daily-demand series, 28 days ahead from 12 monthly origins across 2025. **The SQL
+function won on accuracy** — median series error 17.1% against 19.5%, best on 17 of 21
+series — with no training code and no tuning. **It also ran 14.3% low**, below actual
+demand at every origin, so under the pass rule written before 2025 was downloaded it does
+not qualify as a replacement.
+
+<table>
+<tr>
+<td width="210"><b>Executed</b></td>
+<td>all 756 forecast cells scored with zero failures, v2 as fresh inference on a Databricks trial workspace; predictions stored in Delta and served by a code-managed AI/BI dashboard; 85 tests in CI</td>
+</tr>
+<tr>
+<td><b>Not like-for-like</b></td>
+<td>v2 ran on Databricks while Prophet and the baseline ran locally, so runtimes are reported but not compared as a speed test</td>
+</tr>
+<tr>
+<td><b>Not claimed</b></td>
+<td>a retrospective backtest on one public dataset — no universal winner, and no staffing, capacity or savings result</td>
+</tr>
+</table>
+
+**Inspect** ·
+[benchmark protocol](https://github.com/soulipaco/databricks-forecast-planning-cockpit/blob/main/docs/design/03_BENCHMARK_PROTOCOL.md) ·
+[evidence index](https://github.com/soulipaco/databricks-forecast-planning-cockpit/blob/main/evidence/README.md) ·
+[what v2 needed to run](https://github.com/soulipaco/databricks-forecast-planning-cockpit/blob/main/docs/adr/native_v2_runtime_blocker.md)
 
 ### [contact-center-new-hire-intelligence](https://github.com/soulipaco/contact-center-new-hire-intelligence)
 
